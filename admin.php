@@ -94,7 +94,7 @@ $admin = $row['name'];
             <h3>Добавьте новый тип девайса</h3>
             <form action="php/create_type_device.php" method="post">
                 <p>type_device</p>
-                <input type="text" name="type_device"> <br> <br>
+                <input type="text" name="type_device" required> <br> <br>
                 <button type="submit">Добавить 
             </form>
         </div>
@@ -195,22 +195,22 @@ $admin = $row['name'];
             ?>
         </select> <br>
             <label for="start_date">Start Date:</label>
-            <input type="date" name="start_date" id="start_date">
+            <input type="date" name="start_date" id="start_date" required>
             <br>
             <label for="completion_date">Completion Date:</label>
-            <input type="date" name="completion_date" id="completion_date">
+            <input type="date" name="completion_date" id="completion_date" required>
             <br>
             <label for="component">Component:</label>
-            <input type="text" name="component" id="component">
+            <input type="text" name="component" id="component" required>
             <br>
             <label for="warranty">Warranty:</label>
-            <input type="date" name="warranty" id="warranty">
+            <input type="date" name="warranty" id="warranty" required>
             <br>
             <label for="manufacturer">Manufacturer:</label>
-            <input type="text" name="manufacturer" id="manufacturer">
+            <input type="text" name="manufacturer" id="manufacturer" required>
             <br>
             <label for="model">Model:</label>
-            <input type="text" name="model" id="model">
+            <input type="text" name="model" id="model" required>
             <br>
             <input type="submit" value="Create Order">
         </form>
@@ -294,7 +294,7 @@ $admin = $row['name'];
             <h3>Добавьте новый статус заказа</h3>
             <form action="php/create_status.php" method="post">
                 <p>status_repair</p>
-                <input type="text" name="status_repair"> <br> <br>
+                <input type="text" name="status_repair" required> <br> <br>
                 <button type="submit">Добавить 
             </form>
         </div>
@@ -335,15 +335,15 @@ $admin = $row['name'];
             <h3>Добавьте нового зарегистрированного пользователя</h3>
             <form action="php/create_users.php" method="post">
                 <p>Почта</p>
-                <input type="mail" name="email">
+                <input type="mail" name="email" required>
                 <p>Имя</p>
-                <input type="text" name="name">
+                <input type="text" name="name" required>
                 <p>Фамилия</p>
-                <input type="text" name="surname">
+                <input type="text" name="surname" required>
                 <p>Пароль</p>
-                <input type="password" name="password">
+                <input type="password" name="password" required>
                 <p>Админ</p>
-                <input type="number" name="isAdmin"> <br> <br>
+                <input type="number" name="isAdmin" required> <br> <br>
                 <button type="submit">Добавить 
             </form>
         </div>
@@ -382,13 +382,13 @@ $admin = $row['name'];
             <h3>Добавьте нового незарегистрированного пользователя</h3>
             <form action="php/create_users_2.php" method="post">
                 <p>Телефон</p>
-                <input type="tel" name="telephone">
+                <input type="tel" name="telephone" required>
                 <p>Имя</p>
-                <input type="text" name="name">
+                <input type="text" name="name" required>
                 <p>Статус звонка</p>
-                <input type="number" name="status_call">
+                <input type="number" name="status_call" required>
                 <p>Дата и время</p>
-                <input type="datetime" name="curr_date"> <br> <br>
+                <input type="datetime" name="curr_date" required> <br> <br>
                 <button type="submit">Добавить 
             </form>
         </div>
@@ -398,7 +398,7 @@ $admin = $row['name'];
             <!-- Запрос 1 -->
             <h2>Получить список всех устройств, находящихся в ремонте с данными заказчика.</h2>
             <form id="searchForm1" method="POST">
-                <input type="text" name="email-1" id="email" placeholder="Напишите email заказчика">
+                <input type="text" name="email-1" id="email" placeholder="Напишите email заказчика" required>
             </form>
 
             <table>
@@ -530,8 +530,8 @@ $admin = $row['name'];
             <!-- Запрос 6 -->
             <h2>Получить список всех ремонтных заказов, у которых дата завершения ремонта попадает в заданный временной интервал.</h2>
             <form id="searchForm6" method="POST">
-                <input type="date" name="start_date" id="start-date">
-                <input type="date" name="end_date" id="end-date">
+                <input type="date" name="start_date" id="start-date" required>
+                <input type="date" name="end_date" id="end-date" required>
                 <button type="submit">Отправить</button>
             </form>
             <table>
@@ -555,7 +555,7 @@ $admin = $row['name'];
             <!-- Запрос 7 -->
             <h2>Получить список всех устройств, у которых неисправность связана с определенным компонентом.</h2>
             <form id="searchForm7" method="POST">
-                <input type="text" name="component" id="component1" placeholder="Компонент">
+                <input type="text" name="component" id="component1" placeholder="Компонент" required>
             </form>
             <table>
             <thead>
@@ -621,7 +621,7 @@ $admin = $row['name'];
             <!-- Запрос 10 -->
             <h2>Получить список всех ремонтных заказов, у которых неисправность связана с определенным производителем устройства.</h2>
             <form id="searchForm10" method="POST">
-                <input type="text" name="manufacturer" id="manufacturer1" placeholder="Производитель">
+                <input type="text" name="manufacturer" id="manufacturer1" placeholder="Производитель" required>
             </form>
             <table>
             <thead>

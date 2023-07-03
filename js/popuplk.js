@@ -2,6 +2,8 @@
   $('.close-popup').click(function() {
     $('.popup-bg').fadeOut(800);
     $('html').removeClass('no-scroll');
+    $('.request__form')[0].reset();
+    $('.request__form')[0].reset();
   });
 
   // BURGER
